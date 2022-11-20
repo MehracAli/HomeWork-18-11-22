@@ -1,11 +1,12 @@
 ﻿
-string str = "i HAve nOt FAilEd. i'Ve JuSt FOund 10,000 wAYs THat wON't WOrK.";
+string str = "haMisi ZEmaneDENDi";
 
 static void correcting(string str)
 {
 
     string tolower = str.ToLower();
     string[] split = tolower.Split();
+    string words = string.Empty;
     
     foreach(string item in split)
     {
@@ -17,9 +18,10 @@ static void correcting(string str)
         string toupper = remove2.ToUpper();
         //Console.WriteLine(toupper);
         string replace = item.Replace(remove2, toupper);
-        Console.WriteLine(replace);
-
+        //Console.WriteLine(replace);
+        words += (replace+" ");
     }
+    Console.WriteLine(words);
 }
 
 correcting(str);
