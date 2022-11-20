@@ -1,27 +1,27 @@
 ﻿
-string str = "haMisi ZEmaneDENDi";
+string sentence = "i HAve nOt FAilEd. i'Ve JuSt FOund 10,000 wAYs THat wON't WOrK.";
 
-static void correcting(string str)
+static void ToUpFirstLetters(string sentence)
 {
 
-    string tolower = str.ToLower();
-    string[] split = tolower.Split();
-    string words = string.Empty;
+    string ToLowSentence = sentence.ToLower();
+    string[] SplitSentence = ToLowSentence.Split();
+    string Words = string.Empty;
     
-    foreach(string item in split)
+    foreach(string item in SplitSentence)
     {
         //Console.WriteLine(item);
         string remove = item.Remove(0,1);
         //Console.WriteLine(remove);
-        string remove2 = item.Remove(1);
+        string FirstLetter = item.Remove(1);//0. index qalir.
         //Console.WriteLine(remove2);
-        string toupper = remove2.ToUpper();
+        string ToUpFirstLetter = FirstLetter.ToUpper();//0. index boyuyur.
         //Console.WriteLine(toupper);
-        string replace = item.Replace(remove2, toupper);
+        string ReplaceLetters = item.Replace(FirstLetter, ToUpFirstLetter);//0. indexler yerlerini deyisir.
         //Console.WriteLine(replace);
-        words += (replace+" ");
+        Words += (ReplaceLetters+" ");
     }
-    Console.WriteLine(words);
+    Console.WriteLine(Words);
 }
 
-correcting(str);
+ToUpFirstLetters(sentence);
